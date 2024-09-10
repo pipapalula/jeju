@@ -1,0 +1,77 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@font-face {
+  font-family: 'EF_jejudoldam';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,body{font-family: 'EF_jejudoldam', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;}
+
+.container{width: 100%; height: 100vh; 
+           background-color: rgb(51, 58, 65);
+           display: flex; background-image: url(../video/stone-day-bag-4185981_1280.jpg); background-size: cover;}
+.header{position: relative; z-index: 10; width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between;  padding: 16vh 3vw; }
+
+.header>a:nth-child(1){font-size: 70px; text-align: center; color: orange;}
+.header>a:nth-child(2){font-size: 30px; margin-top: 200px; color: #666;}
+.logo{ text-align: center; font-size: 20px; color: aliceblue; line-height: 4vw;}
+.logo img{width: 100%;}
+.copyright{margin-top: 10px; font-size: 14px; color: #777; letter-spacing: 2px;}
+
+
+
+
+
+
+.content{width: 80%; height: 100vh; display: flex; flex-direction: column;}
+    .search_box{width: 100%; height: 6vw;  display: flex; justify-content: end; align-items: center; position: absolute; top: 0; right: 0; z-index: 15;}
+    .search_box>p{font-size: 30px; margin-right: 50px; cursor: pointer;}
+    .search{ margin-right: 20px;}
+    .search>button{width: 80px; color: white; background-color: #777;}
+    .search_box>p>i:nth-child(1){margin-right: 10px;}
+
+    .main{ display: flex; margin-top: 30px; height: calc(100% - 24px);}
+    .box{filter: saturate(0); flex: 1; padding: 100px 40px; height: 100%;cursor: pointer; transition: all 1s; position: relative;}
+    .inner{display: flex; flex-direction: column; justify-content: space-between; height: 100%; position: relative; z-index: 8;}
+    
+    .box_title{ width: 100%;}
+    .box_title h2{ color: black; font-weight: lighter; transition: 1s;}
+    .box_title h2::after{content: ""; display: block; width: 40px; border: 1.5px solid sandybrown; margin-top: 30px; transition: 1s;}
+    .box_title p{margin-top: 50px; color: #777; font-size: 20px;}
+    
+    /* box의 before요소 hover 효과 */
+    .box::before{content: ""; position: absolute; display: block; width: 80%; height: 95%; background-color: wheat; top: 0; left: -200px;
+    opacity: 0; transition: all 1s;}
+    
+    .box:hover{z-index: 3; flex: 1.5; filter: none; padding-top: 50px;}
+    .box:hover .box_title h2{font-size: 40px;}
+    .box:hover .box_title h2::after{width: 200px;}
+  
+    .box:hover::before{opacity: 0.8; left: 0;}
+    
+    
+    .box iframe{width: 100%; height: 200px; overflow: hidden;}
+    
+    .inner{display: flex; flex-direction: column; justify-content: space-between;}
+    
+
+    /* page */
+    .page{width: 80%; height: 100vh; position: fixed;  z-index: 10; right: 100vw; top: 0; display: flex; box-sizing: 
+      border-box; background-color: olivedrab; padding: 20vh 7vw; opacity: 0; transition: 1s;}
+      .page_title{width: 35%; height: 100vh;}
+      .page_title h1{font-size: 50px; color: white;}
+      .page_title p{margin-top: 30px; color: #333;}
+      .page_title button{margin-top: 50px; font-size: 35px; background-color: white; color: rgb(57, 196, 185); border-radius: 10px;}
+      .page iframe{width: 80%; height: 100%;}
+      .page figure video{width: 100%; height: 100%; object-fit: cover;}
+      
+      
+      .page2 iframe{ width: 140%; height: 100%;}
+      .on{right: 0; opacity: 1;}
